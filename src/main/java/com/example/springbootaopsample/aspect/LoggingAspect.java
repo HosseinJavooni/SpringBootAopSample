@@ -19,4 +19,16 @@ public class LoggingAspect {
     public void doSomeAfter(){
         System.out.println("This is After Advise in aspect!...");
     }
+
+    //Before aspect on any method with name "sayBay"
+    @Before("execution(* sayBay())")
+    public void doSomeBefore2(){
+        System.out.println("This is Before Advise 2 in aspect!...");
+    }
+
+    //After aspect on any method that name is start with "say"
+    @After("execution(* say*())")
+    public void doSomeAfter2(){
+        System.out.println("This is After Advise 2 in aspect!...");
+    }
 }
