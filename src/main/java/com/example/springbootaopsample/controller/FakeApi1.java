@@ -18,4 +18,9 @@ public class FakeApi1 {
         return "bay2";
     }
 
+    @GetMapping("/hi3")
+    public String sayHi3(boolean test){
+        return test + " --> Hi3";
+    }
+
 }
